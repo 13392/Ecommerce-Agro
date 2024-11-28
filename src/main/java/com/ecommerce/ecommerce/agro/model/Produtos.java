@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table
-public class produtos {
+public class Produtos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +23,7 @@ public class produtos {
     @Column(name = "quantidade_estoque")
     private Integer QuantidadeEstoque;
 
-
+    @ManyToOne
     private Integer categoriaId;
 
     @Column(name = "imagem_url")

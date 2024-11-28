@@ -6,7 +6,7 @@ import java.util.Objects;
 
 @Entity
 @Table
-public class categorias {
+public class Categorias {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,7 +46,7 @@ public class categorias {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        categorias that = (categorias) o;
+        Categorias that = (Categorias) o;
         return Objects.equals(Id, that.Id);
     }
 
