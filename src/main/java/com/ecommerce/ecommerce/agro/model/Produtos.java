@@ -1,7 +1,10 @@
 package com.ecommerce.ecommerce.agro.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table
@@ -23,8 +26,10 @@ public class Produtos {
     @Column(name = "quantidade_estoque")
     private Integer QuantidadeEstoque;
 
-    @ManyToOne
-    private Integer categoriaId;
+    @OneToMany
+    @JoinColumn(name = "produtos_id", referencedColumnName = "id")
+    @JsonIgnoreProperties("produtos")
+    private List<Categorias> categoriaId;
 
     @Column(name = "imagem_url")
     private String imagemUrl;

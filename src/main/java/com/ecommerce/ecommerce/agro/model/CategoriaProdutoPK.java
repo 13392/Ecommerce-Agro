@@ -7,7 +7,7 @@ import jakarta.persistence.ManyToOne;
 @Embeddable
 public class CategoriaProdutoPK {
 
-    @ManyToOne;
-    @JoinColumn(name ="produto_id", referencedColumnName = "id");
+    @ManyToOne
+    @JoinColumn(name ="produtos_id", referencedColumnName = "id")
     private Produtos produtos;
 }
