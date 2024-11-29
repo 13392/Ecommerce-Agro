@@ -10,4 +10,12 @@ public class CategoriaProduto {
 
     @EmbeddedId
     private CategoriaProdutoPK id;
+
+    public CategoriaProdutoPK getId() {
+        return id;
+    }
+
+    public void setId(CategoriaProdutoPK id) {
+        this.id = id;
+    }
 }
